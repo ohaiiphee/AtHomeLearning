@@ -10,5 +10,11 @@ public class Numbers {
 
         System.out.println(3+3);
         System.out.println(2*5);
+
+        float f1 = 35e3f;
+        double f2 = 12E4d;
+
+        System.out.println(f1);
+        System.out.println(f2);
     }
 }
