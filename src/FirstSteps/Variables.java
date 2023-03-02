@@ -19,7 +19,7 @@ public class Variables {
         int x = 5;
         int y = 2;
 
-        System.out.println("My name is " + name + " and I´m " + age + " years old.");
+        System.out.println("My name is " + name + " and I'm " + age + " years old.");
         System.out.println(x * y);
 
         //char can display ASCII values
