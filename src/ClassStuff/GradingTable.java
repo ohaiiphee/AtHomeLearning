@@ -1,16 +1,18 @@
 package ClassStuff;
 
-import org.w3c.dom.ls.LSOutput;
+
 
 public class GradingTable {
     public static void main(String[] args) {
-        int points;
+        int points =67;
 
 getGrade(49);
 getGrade(55);
 getGrade(78);
 getGrade(99);
 getGrade(2);
+getGrade(points);
+
 
     }
 
