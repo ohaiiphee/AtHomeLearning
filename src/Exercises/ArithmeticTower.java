@@ -1,4 +1,4 @@
-package ClassStuff;
+package Exercises;
 
 public class ArithmeticTower {
     public static void main(String[] args) {
