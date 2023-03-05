@@ -3,9 +3,7 @@ package Exercises;
 public class DistanceConversion {
     public static void main(String[] args) {
         int kilometers = 2;
-
         double miles = kilometersToMiles(kilometers);
-
         double anotherMiles = anotherKilometerToMiles(kilometers);
 
         System.out.println(kilometers + "Km is " + miles + "miles.");
@@ -13,6 +11,8 @@ public class DistanceConversion {
         System.out.println(kilometers+ "Km is " + anotherMiles + "miles.");
 
         kilometers = 5;
+        miles = kilometersToMiles(kilometers);
+        anotherMiles = anotherKilometerToMiles(kilometers);
 
         System.out.println(kilometers + "Km is " + miles + "miles.");
 
