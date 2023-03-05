@@ -8,8 +8,8 @@ public class Rectangle {
         int circumference = calculateCircumference(width, length);
         int area = calculateArea(width, length);
 
-        System.out.println(circumference);
-        System.out.println(area);
+        System.out.println("Circumference is: " + circumference);
+        System.out.println("Area is: " + area);
 
     }
 
