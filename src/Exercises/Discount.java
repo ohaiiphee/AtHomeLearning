@@ -2,67 +2,49 @@ package Exercises;
 
 public class Discount {
     public static void main(String[] args) {
-        //discount bus
-        //senior -15%
-        //dog -20%
-        //student -10%
-        //full price 3,2€
-        // senior + dog + grandson *2 bus
+        /* full bus ticket = 3,2€
+        Edna (senior) = -15%
+        Lola (dog) = -20%
+        Paul (student) = -10%
+        2 trips each = 6 * 3.2
+         */
 
-        //books
-        //-10% > 2nonfiction + >= 1 fiction
-        // 2 fiction: 15 + 18 €
-        // 2 nonfiction: 23+28 €
+        double busTicket = 3.2;
+        boolean isSenior;
+        boolean isDog;
+        boolean isStudent;
 
-        boolean isSenior = true;
-        boolean isDog = true;
-        boolean isStudent = true;
+        double totalBusTicketNoDiscount = 6 * busTicket;
 
-        double fullBusPrice = 3.2;
+        double busTicketEdna = getBusDiscount(busTicket, true, false, false);
+        double busTicketPaul = getBusDiscount(busTicket, false, false, true);
+        double busTicketLola = getBusDiscount(busTicket, false, true, false);
 
-        double busTicketEdna = getBusDiscountPrice(fullBusPrice,true, false, false);
-        double busTicketLola = getBusDiscountPrice(fullBusPrice, false, true, false);
-        double busTicketPaul = getBusDiscountPrice(fullBusPrice, false, false, true);
+        double totalBusTicketCostWithDiscount = 2 * (busTicketEdna + busTicketLola + busTicketPaul);
 
-        double totalBusPriceDiscounted = 2 * (busTicketEdna + busTicketLola + busTicketPaul);
-        double totalBusPriceNoDiscount = 6 * 3.2;
+        double totalBusSavings = totalBusTicketNoDiscount - totalBusTicketCostWithDiscount;
 
-        int fiction = 2;
-        int nonFiction = 2;
+        System.out.println("They saved " + totalBusSavings + " Euros on the bus.");
 
-        double fullBookPriceNoDiscount = 15 + 18 + 23 + 28;
+        //bookshop discount = -10% IF >=2 fiction && >= 1 non-fiction
 
-        double totalBookPriceDiscounted = getBookDiscountPrice(fullBookPriceNoDiscount, fiction, nonFiction);
-
-        double totalSavedMoney = (totalBusPriceNoDiscount + fullBookPriceNoDiscount) - (totalBusPriceDiscounted + totalBookPriceDiscounted);
-
-        System.out.println("Edna, Lola and Paul saved a total of " + totalSavedMoney);
 
 
     }
 
-    public static double getBusDiscountPrice(double fullBusPrice, boolean isSenior, boolean isDog, boolean isStudent) {
+    public static double getBusDiscount(double busTicket, boolean isSenior, boolean isDog, boolean isStudent) {
         double discountedPrice;
-        if(isSenior) {
-            discountedPrice = fullBusPrice * 0.85;
+        if (isSenior) {
+            discountedPrice = busTicket * 0.85;
         } else if (isDog) {
-            discountedPrice = fullBusPrice * 0.8;
-        } else if (isStudent){
-            discountedPrice = fullBusPrice * 0.9;
+            discountedPrice = busTicket * 0.80;
+        } else if (isStudent) {
+            discountedPrice = busTicket * 0.90;
         } else {
-            discountedPrice = fullBusPrice;
+            discountedPrice = busTicket;
         }
         return discountedPrice;
-    }
 
-    public static double getBookDiscountPrice(double fullBookPrice, int fiction, int nonFiction) {
-        double discountedBookPrice;
-        if (fiction >= 1 && nonFiction > 2) {
-            discountedBookPrice = fullBookPrice * 0.9;
-        } else {
-            discountedBookPrice = fullBookPrice;
-        }
-        return discountedBookPrice;
     }
-
 }
+
