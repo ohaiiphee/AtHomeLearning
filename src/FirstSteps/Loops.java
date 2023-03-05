@@ -13,6 +13,9 @@ public class Loops {
         //do while - the upside down loop - executes the code in the body of the loop once before even checking the
         //condition, then it executes it as long as the  condition is true
 
+        //for loop - the complex loop - used to run a block of code for a certain number of times
+        //it defines its own control variable (i, index…), controls it and changes it
+
 
     }
 }
