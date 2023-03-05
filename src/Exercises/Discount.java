@@ -28,9 +28,41 @@ public class Discount {
 
         //bookshop discount = -10% IF >=2 fiction && >= 1 non-fiction
 
+        int fiction = 2;
+        int nonFiction = 2;
+
+        int totalBookCostNoDiscount = 23 + 28 + 15 + 18;
+        double totalSpentOnBooks = getBookDiscount(totalBookCostNoDiscount, 2, 2);
+        double totalBookSavings = totalBookCostNoDiscount - totalSpentOnBooks;
 
 
-    }
+        System.out.println("they saved " + totalBookSavings + " Euros on books.");
+
+        double totalSavings = totalBookSavings + totalBusSavings;
+
+        System.out.println("In total they saved " + totalSavings + " Euros.");
+
+        double fullPriceForEverything = 6 * 3.2 + totalBookCostNoDiscount;
+        double amountSpent = busTicketEdna + busTicketLola + busTicketPaul + totalSpentOnBooks;
+
+        double totalSpent = fullPriceForEverything - amountSpent;
+
+        System.out.println(fullPriceForEverything);
+        System.out.println(amountSpent);
+        System.out.println(totalSpent);
+
+
+
+
+
+
+
+
+
+
+        }
+
+
 
     public static double getBusDiscount(double busTicket, boolean isSenior, boolean isDog, boolean isStudent) {
         double discountedPrice;
@@ -44,7 +76,15 @@ public class Discount {
             discountedPrice = busTicket;
         }
         return discountedPrice;
+    }
 
+    public static double getBookDiscount(int totalBookCostNoDiscount, int fiction, int nonFiction) {
+        double bookDiscount;
+        if ( fiction >= 2 && nonFiction >=1) {
+            bookDiscount = totalBookCostNoDiscount * 0.9;
+        } else {
+            bookDiscount = totalBookCostNoDiscount;
+        } return bookDiscount;
     }
 }
 
