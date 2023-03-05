@@ -42,7 +42,7 @@ public class Discount {
     double fullBookDiscount = fullBookPriceNoDiscount - totalBookPriceDiscounted;
 
     System.out.println("Edna, Lola and Paul saved a total of " + totalSavedMoney);
-        System.out.println(fullBookPriceNoDiscount);
+    System.out.println(fullBookPriceNoDiscount);
 
 
 
