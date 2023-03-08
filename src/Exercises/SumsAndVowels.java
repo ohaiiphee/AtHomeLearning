@@ -2,7 +2,7 @@ package Exercises;
 
 import java.util.Scanner;
 
-public class SumsAndVowels1 {
+public class SumsAndVowels {
     public static void main(String[] args) {
 
         Scanner scanner1 = new Scanner(System.in);
